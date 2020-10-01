@@ -12,7 +12,7 @@ var html = `
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>微软全局子号自助开通</title>
+    <title>office self signup</title>
     <link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css">
     <link href="https://i.loli.net/2020/01/25/mHyKw936UxpEM1Y.png" rel="icon" type="image/png">
@@ -133,12 +133,12 @@ var html = `
         $('form').submit(function(e) {
             e.preventDefault();
             mdui.dialog({
-                title: '创建账号',
-                content: '点击确认后开始创建账号，请耐心等待，勿刷新网页',
+                title: 'Create an account',
+                content: 'Click to confirm and start to create an account. Please wait patiently and do not refresh the page',
                 buttons: [{
-                    text: '取消'
+                    text: 'cancel'
                 }, {
-                    text: '确认',
+                    text: 'confirm',
                     onClick: function(inst) {
                         $('.create-wait').show();
                         $.ajax({
@@ -159,7 +159,7 @@ var html = `
                                     $('.mdui-row>h2').hide();
                                     $('.ainfo').show();
                                 } else if (response.stat == 'username exists') {
-                                    mdui.alert('创建失败，前缀已被占用');
+                                    mdui.alert('Failed to create, prefix is ​​already taken');
                                 } else {
                                     JSON.stringify(response);
                                 }
